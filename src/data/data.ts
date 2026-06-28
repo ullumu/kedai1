@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 import { HeaderItem } from "@/types/menu";
 import { FeaturesType } from "@/types/features";
 import { ExpertChiefType } from "@/types/expertchief";
@@ -7,14 +5,14 @@ import { GalleryImagesType } from "@/types/galleryimage";
 import { FooterLinkType } from "@/types/footerlink";
 import { FullMenuType } from "@/types/fullmenu";
 
-const HeaderData: HeaderItem[] = [
+export const HeaderData: HeaderItem[] = [
   { label: "About Us", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
   { label: "Reserve Table", href: "/#reserve" },
   { label: "Docs", href: "/documentation" },
 ];
 
-const FeaturesData: FeaturesType[] = [
+export const FeaturesData: FeaturesType[] = [
   {
     imgSrc: "/images/Features/featureOne.svg",
     heading: "Elegant Dining Atmosphere",
@@ -41,7 +39,7 @@ const FeaturesData: FeaturesType[] = [
   },
 ];
 
-const ExpertChiefData: ExpertChiefType[] = [
+export const ExpertChiefData: ExpertChiefType[] = [
   {
     profession: "Senior Chef",
     name: "Marco Benton",
@@ -59,7 +57,7 @@ const ExpertChiefData: ExpertChiefType[] = [
   },
 ];
 
-const GalleryImagesData: GalleryImagesType[] = [
+export const GalleryImagesData: GalleryImagesType[] = [
   {
     src: "/images/Gallery/foodone.webp",
     name: "Caesar Salad(187 Kcal)",
@@ -82,7 +80,7 @@ const GalleryImagesData: GalleryImagesType[] = [
   },
 ];
 
-const FullMenuData: FullMenuType[] = [
+export const FullMenuData: FullMenuType[] = [
   {
     name: "Grilled Salmon",
     price: "$18.99",
@@ -123,7 +121,7 @@ const FullMenuData: FullMenuType[] = [
   },
 ];
 
-const FooterLinkData: FooterLinkType[] = [
+export const FooterLinkData: FooterLinkType[] = [
   {
     section: "Company",
     links: [
@@ -144,14 +142,3 @@ const FooterLinkData: FooterLinkType[] = [
     ],
   },
 ];
-
-export const GET = () => {
-  return NextResponse.json({
-    HeaderData,
-    FeaturesData,
-    ExpertChiefData,
-    GalleryImagesData,
-    FullMenuData,
-    FooterLinkData,
-  });
-};

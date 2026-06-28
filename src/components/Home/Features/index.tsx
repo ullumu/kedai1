@@ -2,29 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { useEffect, useState } from "react";
 import { FeaturesType } from "@/types/features";
 import FeaturesSkeleton from "../../Skeleton/Features";
+import { FeaturesData } from "@/data/data";
 
 const Features = () => {
-  const [features, setFeatures] = useState<FeaturesType[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setFeatures(data.FeaturesData);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const features = FeaturesData;
+  const loading = false;
 
   return (
     <section id="features">

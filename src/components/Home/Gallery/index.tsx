@@ -2,37 +2,21 @@
 import Image from "next/image";
 import Masonry from "react-masonry-css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GalleryImagesSkeleton from "../../Skeleton/GalleryImages";
 import { Icon } from "@iconify/react";
 import { GalleryImagesType } from "@/types/galleryimage";
 import { FullMenuType } from "@/types/fullmenu";
+import { GalleryImagesData, FullMenuData } from "@/data/data";
 
 const Gallery = () => {
-  const [galleryImages, setGalleryImages] = useState<GalleryImagesType[]>([]);
-  const [fullMenu, setFullMenu] = useState<FullMenuType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const galleryImages = GalleryImagesData;
+  const fullMenu = FullMenuData;
+  const loading = false;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setGalleryImages(data.GalleryImagesData);
-        setFullMenu(data.FullMenuData);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
 
   return (
     <section id="menu" className="scroll-mt-20">

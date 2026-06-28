@@ -1,27 +1,14 @@
 "use client";
 
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import Logo from "../Header/Logo";
 import { FooterLinkType } from "@/types/footerlink";
+import { FooterLinkData } from "@/data/data";
 
 const Footer: FC = () => {
-  const [footerlink, SetFooterlink] = useState<FooterLinkType[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        SetFooterlink(data.FooterLinkData);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  const footerlink = FooterLinkData;
 
   return (
     <footer className="pt-8">

@@ -1,31 +1,16 @@
 "use client";
 import Slider from "react-slick";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ExpertChiefType } from "@/types/expertchief";
 import ChiefDetailSkeleton from "../../Skeleton/ChiefDetail";
+import { ExpertChiefData } from "@/data/data";
 
 const Expert = () => {
-  const [chiefDetail, setChiefDetail] = useState<ExpertChiefType[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setChiefDetail(data.ExpertChiefData);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const chiefDetail = ExpertChiefData;
+  const loading = false;
 
   const settings = {
     dots: true,

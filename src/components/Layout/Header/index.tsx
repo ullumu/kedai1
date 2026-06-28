@@ -9,9 +9,10 @@ import Signin from "@/components/Auth/SignIn";
 import SignUp from "@/components/Auth/SignUp";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { HeaderItem } from "@/types/menu";
+import { HeaderData } from "@/data/data";
 
 const Header: React.FC = () => {
-  const [headerLink, setHeaderLink] = useState<HeaderItem[]>([]);
+  const headerLink = HeaderData;
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -22,20 +23,6 @@ const Header: React.FC = () => {
   const signInRef = useRef<HTMLDivElement>(null);
   const signUpRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setHeaderLink(data.HeaderData);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const handleScroll = () => {
     setSticky(window.scrollY >= 20);
