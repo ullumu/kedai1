@@ -12,14 +12,13 @@ const Hero = () => {
               Kedai Rumah G23
             </h2>
             <p className="text-black/55 text-lg font-normal mb-10 lg:text-start text-center">
-              PAYU Seni Dapur Urban is a producer of ready-to-eat, healthy, and
+              Kedai Rumah G23 is a producer of ready-to-eat, healthy, and
               halal food and beverages based in Denpasar, Bali. Founded in 2019,
               our journey began with our love for the culinary world, including
               Indonesian cuisine which is rich in the taste of spices. As time
               goes by, today&apos;s dynamic and practical urban society demands
               us to create ready-to-eat dishes that can be enjoyed anytime,
-              anywhere, by anyone, but remain healthy without adding artificial
-              flavorings, preservatives, or other chemicals. As PAYU strives to
+              anywhere, by anyone, but remain healthy without additional ingredients. As Kedai Rumah G23 strives to
               realize these consumer desires, we see the huge opportunities for
               halal food products in the global market, this adding to the
               challenge for us to make our food competitive in the international
