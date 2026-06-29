@@ -17,8 +17,7 @@ const Footer: FC = () => {
           <div className="col-span-2">
             <Logo />
             <p className="text-sm font-medium text-grey my-5 max-w-70%">
-              Open an account in minutes, get full financial control for much
-              longer.
+              chef
             </p>
             <div className="flex gap-6 items-center">
               <Link
@@ -116,7 +115,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <div className="border-t border-grey/15 py-5 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
-          <p className="text-sm text-black/70">
+          {/* <p className="text-sm text-black/70">
             @2025 - Chefs kitchen. All Rights Reserved by{" "}
             <Link
               href="https://getnextjstemplates.com/"
@@ -124,9 +123,9 @@ const Footer: FC = () => {
             >
               GetNextjsTemplates
             </Link>
-          </p>
+          </p> */}
 
-          <div className="">
+          {/* <div className="">
             <Link
               href="#"
               className="text-sm text-black/70 px-5 border-r border-grey/15 hover:text-primary hover:underline"
@@ -139,7 +138,7 @@ const Footer: FC = () => {
             >
               Terms & conditions
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

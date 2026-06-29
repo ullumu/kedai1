@@ -19,8 +19,7 @@ export const HalalCertificationData = {
 export const HeaderData: HeaderItem[] = [
   { label: "About Us", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
-  // { label: "Reserve Table", href: "/#reserve" },
-  // { label: "Docs", href: "/documentation" },
+  
 ];
 
 export const FeaturesData: FeaturesType[] = [
@@ -48,6 +47,7 @@ export const FeaturesData: FeaturesType[] = [
     subheading:
       "Reserve online in seconds or walk in anytime — we’re ready when you are.",
   },
+  
 ];
 
 export const ExpertChiefData: ExpertChiefType[] = [
@@ -144,7 +144,6 @@ export const FooterLinkData: FooterLinkType[] = [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/#aboutus" },
       { label: "Menu", href: "/#menu" },
-      // { label: "Reserve Table", href: "/#reserve" },
     ],
   },
   {
