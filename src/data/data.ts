@@ -5,11 +5,22 @@ import { GalleryImagesType } from "@/types/galleryimage";
 import { FooterLinkType } from "@/types/footerlink";
 import { FullMenuType } from "@/types/fullmenu";
 
+export const HalalCertificationData = {
+  halalLogo: {
+    imageSrc: "/images/sertifikat/logo-halal.jpg",
+    alt: "Logo Halal Indonesia",
+  },
+  certificateNumber: {
+    label: "Nomor Sertifikat Perizinan",
+    value: "P-IRT 8025171021064-30",
+  },
+};
+
 export const HeaderData: HeaderItem[] = [
   { label: "About Us", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
-  { label: "Reserve Table", href: "/#reserve" },
-  { label: "Docs", href: "/documentation" },
+  // { label: "Reserve Table", href: "/#reserve" },
+  // { label: "Docs", href: "/documentation" },
 ];
 
 export const FeaturesData: FeaturesType[] = [
@@ -59,24 +70,29 @@ export const ExpertChiefData: ExpertChiefType[] = [
 
 export const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: "/images/Gallery/foodone.webp",
+    src: "/images/Gallery/food1.jpg",
     name: "Caesar Salad(187 Kcal)",
     price: 35,
   },
   {
-    src: "/images/Gallery/foodtwo.webp",
+    src: "/images/Gallery/food2.jpg",
     name: "Christmas salad(118 Kcal)",
     price: 17,
   },
   {
-    src: "/images/Gallery/foodthree.webp",
+    src: "/images/Gallery/food3.jpg",
     name: "Sauteed mushrooms with pumpkin bowl(238 kcal)",
     price: 45,
   },
   {
-    src: "/images/Gallery/foodfour.webp",
+    src: "/images/Gallery/food4.jpg",
     name: "BBQ Chicken Feast Pizza(272 kcal)",
     price: 27,
+  },
+  {
+    src: "/images/Gallery/food5.jpg",
+    name: "Christmas salad(118 Kcal)",
+    price: 17,
   },
 ];
 
@@ -128,16 +144,16 @@ export const FooterLinkData: FooterLinkType[] = [
       { label: "Home", href: "/" },
       { label: "About Us", href: "/#aboutus" },
       { label: "Menu", href: "/#menu" },
-      { label: "Reserve Table", href: "/#reserve" },
+      // { label: "Reserve Table", href: "/#reserve" },
     ],
   },
   {
     section: "Support",
     links: [
       { label: "Help/FAQ", href: "/" },
-      { label: "Press", href: "/" },
-      { label: "Affiliates", href: "/" },
-      { label: "Hotel owners", href: "/" },
+      // { label: "Press", href: "/" },
+      // { label: "Affiliates", href: "/" },
+      // { label: "Hotel owners", href: "/" },
       { label: "Partners", href: "/" },
     ],
   },

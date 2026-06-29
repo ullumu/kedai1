@@ -87,7 +87,7 @@ const Footer: FC = () => {
                   className="text-primary text-3xl lg:text-2xl inline-block me-2"
                 />
                 <p className="text-black text-base">
-                  925 Filbert Street Pennsylvania 18072
+                  Alamat
                 </p>
               </div>
               <Link href="tel:+1(909) 235-9814">
@@ -97,7 +97,7 @@ const Footer: FC = () => {
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
                   />
                   <p className="text-black/60 hover:text-black text-base">
-                    +1(909) 235-9814
+                    No Telp
                   </p>
                 </div>
               </Link>
@@ -108,7 +108,7 @@ const Footer: FC = () => {
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
                   />
                   <p className="text-black/60 hover:text-black text-base">
-                    info@gmail.com
+                   Email
                   </p>
                 </div>
               </Link>
@@ -117,7 +117,7 @@ const Footer: FC = () => {
         </div>
         <div className="border-t border-grey/15 py-5 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
           <p className="text-sm text-black/70">
-            @2025 - Chef's kitchen. All Rights Reserved by{" "}
+            @2025 - Chefs kitchen. All Rights Reserved by{" "}
             <Link
               href="https://getnextjstemplates.com/"
               className="hover:text-primary hover:underline"

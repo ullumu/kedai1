@@ -5,8 +5,9 @@ import Cook from "@/components/Home/Cook";
 import Expert from "@/components/Home/Expert";
 import Gallery from "@/components/Home/Gallery";
 import Newsletter from "@/components/Home/Newsletter";
+import Certification from "@/components/Home/Certification";
 import { Metadata } from "next";
-import ContactForm from "@/components/Contact/Form";
+// import ContactForm from "@/components/Contact/Form";
 export const metadata: Metadata = {
   title: "Kitchen",
 };
@@ -15,11 +16,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Certification />
       <Features />
       <Cook />
-      <Expert />
+      {/* <Expert /> */}
       <Gallery />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Newsletter />
     </main>
   );

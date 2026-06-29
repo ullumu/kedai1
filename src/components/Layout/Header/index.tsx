@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import HeaderLink from "./Navigation/HeaderLink";
 import MobileHeaderLink from "./Navigation/MobileHeaderLink";
-import Signin from "@/components/Auth/SignIn";
-import SignUp from "@/components/Auth/SignUp";
+// import Signin from "@/components/Auth/SignIn";
+// import SignUp from "@/components/Auth/SignUp";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { HeaderItem } from "@/types/menu";
 import { HeaderData } from "@/data/data";
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                 setIsSignInOpen(true);
               }}
             >
-              Sign In
+              Sign Ins
             </button>
             {isSignInOpen && (
               <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">
@@ -130,7 +130,7 @@ const Header: React.FC = () => {
                 setIsSignUpOpen(true);
               }}
             >
-              Sign Up
+              Sign Ups
             </button>
             {isSignUpOpen && (
               <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50">
