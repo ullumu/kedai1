@@ -80,3 +80,4 @@ jobs:
           body: "Release ${{ steps.create_tag.outputs.TAG }}"
           draft: false
           prerelease: false
+          skipIfReleaseExists: true
