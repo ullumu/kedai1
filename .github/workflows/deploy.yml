@@ -36,11 +36,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
+      - name: Build and export static site
         run: npm run build
-
-      - name: Export static site
-        run: npm run export
 
       - name: Create .nojekyll
         run: mkdir -p out && touch out/.nojekyll
