@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: "/kedai1",
+  assetPrefix: "/kedai1",
   images: {
     unoptimized: true,
   },
