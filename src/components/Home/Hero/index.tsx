@@ -50,7 +50,7 @@ const Hero = () => {
               </p>
             </div> */}
             <Image
-              src="/images/hero/banner-image.webp"
+              src="/images/hero/banner-image4.png"
               alt="nothing"
               width={1000}
               height={805}
