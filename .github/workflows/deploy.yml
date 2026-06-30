@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,19 +28,22 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-20-${{ hashFiles('**/package-lock.json', '**/package.json') }}
+          key: ${{ runner.os }}-node-24-${{ hashFiles('**/package-lock.json', '**/package.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-20-
+            ${{ runner.os }}-node-24-
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
+      - name: Export static site
+        run: npm run export
+
       - name: Create .nojekyll
-        run: touch out/.nojekyll
+        run: mkdir -p out && touch out/.nojekyll
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
