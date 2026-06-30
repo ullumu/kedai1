@@ -8,7 +8,7 @@ const Cook = () => {
       <div className="container px-4">
         {/* <div className='absolute right-0 bottom-[-18%] xl:block hidden'>
           <Image
-            src='/images/Cook/burger.webp'
+            src='{`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/Cook/burger.webp'
             alt='burger-image'
             width={463}
             height={622}
@@ -17,7 +17,7 @@ const Cook = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5">
           <div className="lg:col-span-6 flex lg:justify-start justify-center">
             <Image
-              src="/images/Logo/Logo-kedaig23.svg"
+              src='${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/Logo/Logo-kedaig23.svg'
               alt="nothing"
               width={636}
               height={808}
