@@ -19,7 +19,6 @@ export const HalalCertificationData = {
 export const HeaderData: HeaderItem[] = [
   { label: "About Us", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
-  
 ];
 
 export const FeaturesData: FeaturesType[] = [
@@ -47,7 +46,6 @@ export const FeaturesData: FeaturesType[] = [
     subheading:
       "Reserve online in seconds or walk in anytime — we’re ready when you are.",
   },
-  
 ];
 
 export const ExpertChiefData: ExpertChiefType[] = [
@@ -85,7 +83,7 @@ export const GalleryImagesData: GalleryImagesType[] = [
     price: 45,
   },
   {
-    src: "/images/Gallery/food4.jpg",
+    src: '{`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images//images/Gallery/food4.jpg',
     name: "BBQ Chicken Feast Pizza(272 kcal)",
     price: 27,
   },
