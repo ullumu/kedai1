@@ -69,70 +69,48 @@ export const ExpertChiefData: ExpertChiefType[] = [
 export const GalleryImagesData: GalleryImagesType[] = [
   {
     src: "/images/Gallery/food1.jpg",
-    name: "Caesar Salad(187 Kcal)",
-    price: 35,
+    name: "",
+    price: 0,
   },
   {
     src: "/images/Gallery/food2.jpg",
-    name: "Christmas salad(118 Kcal)",
-    price: 17,
+    name: "",
+    price: 0,
   },
   {
     src: "/images/Gallery/food3.jpg",
-    name: "Sauteed mushrooms with pumpkin bowl(238 kcal)",
-    price: 45,
+    name: "",
+    price: 0,
   },
   {
     src: "/images/Gallery/food4.jpg",
-    name: "BBQ Chicken Feast Pizza(272 kcal)",
-    price: 27,
+    name: "",
+    price: 0,
   },
   {
     src: "/images/Gallery/food5.jpg",
-    name: "Christmas salad(118 Kcal)",
-    price: 17,
+    name: "",
+    price: 0,
   },
 ];
 
 export const FullMenuData: FullMenuType[] = [
   {
-    name: "Grilled Salmon",
-    price: "$18.99",
-    description: "Served with lemon butter sauce and grilled vegetables.",
+    name: "",
+    price: "",
+    description: "",
   },
   {
-    name: "Caesar Salad",
-    price: "$9.99",
-    description: "Crisp romaine with parmesan, croutons, and Caesar dressing.",
+    name: "",
+    price: "",
+    description: "",
   },
   {
-    name: "Margherita Pizza",
-    price: "$13.49",
-    description: "Classic pizza with tomato, mozzarella, and fresh basil.",
+    name: "",
+    price: "",
+    description: "",
   },
-  {
-    name: "Tomato Basil Soup",
-    price: "$6.99",
-    description: "Creamy tomato soup with a hint of garlic and fresh basil.",
-  },
-  {
-    name: "Chocolate Lava Cake",
-    price: "$7.99",
-    description:
-      "Warm chocolate cake with a molten center served with vanilla ice cream.",
-  },
-  {
-    name: "Spaghetti Carbonara",
-    price: "$15.25",
-    description:
-      "Spaghetti tossed with eggs, pancetta, parmesan, and black pepper.",
-  },
-  {
-    name: "Tiramisu",
-    price: "$8.50",
-    description:
-      "Layered espresso-soaked ladyfingers with mascarpone and cocoa.",
-  },
+  
 ];
 
 export const FooterLinkData: FooterLinkType[] = [
