@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { imagePath } from "@/utils/imagePath";
 import { HalalCertificationData } from "@/data/data";
 
 const Certification = () => {
@@ -10,7 +11,7 @@ const Certification = () => {
         <div className="rounded-3xl border border-primary/10 bg-white p-6 shadow-sm md:p-8 lg:flex lg:items-center lg:justify-between lg:gap-8">
           <div className="max-w-[220px] mx-auto lg:mx-0">
             <Image
-              src={halalLogo.imageSrc}
+              src={imagePath(halalLogo.imageSrc)}
               alt={halalLogo.alt}
               width={220}
               height={220}

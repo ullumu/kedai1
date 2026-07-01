@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { imagePath } from "@/utils/imagePath";
 
 const Newsletter = () => {
   return (
@@ -47,7 +48,7 @@ const Newsletter = () => {
           <div className="md:col-span-5 relative hidden md:block">
             <div>
               <Image
-                src={"/images/Newsletter/food3-1.png"}
+                src={imagePath("/images/Newsletter/food3-1.png")}
                 alt="soup-image"
                 width={626}
                 height={602}
@@ -56,7 +57,7 @@ const Newsletter = () => {
             </div>
             {/* <div className='absolute top-[78%]'>
               <Image
-                src={'/images/Newsletter/onion.webp'}
+                src={imagePath("/images/Newsletter/onion.webp")}
                 alt='onion-image'
                 width={300}
                 height={122}
@@ -64,7 +65,7 @@ const Newsletter = () => {
             </div> */}
             {/* <div className='absolute top-[30%] right-[-23%]'>
               <Image
-                src={'/images/Newsletter/lec.webp'}
+                src={imagePath("/images/Newsletter/lec.webp")}
                 alt='lettuce-image'
                 width={300}
                 height={122}
@@ -72,7 +73,7 @@ const Newsletter = () => {
             </div>
             <div className='absolute bottom-[10%] left-[0%]'>
               <Image
-                src={'/images/Newsletter/yellow.svg'}
+                src={imagePath("/images/Newsletter/yellow.svg")}
                 alt='yellow-image'
                 width={59}
                 height={59}
@@ -80,7 +81,7 @@ const Newsletter = () => {
             </div> */}
             {/* <div className='absolute bottom-[20%] right-[20%]'>
               <Image
-                src={'/images/Newsletter/blue.svg'}
+                src={imagePath("/images/Newsletter/blue.svg")}
                 alt='blue-image'
                 width={25}
                 height={25}

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { imagePath } from "@/utils/imagePath";
 
 const Logo: React.FC = () => {
   return (
     <Link href="/" className="flex items-center gap-4">
       <Image
-        src="/images/Logo/cropped_circle_image.png"
+        src={imagePath("/images/Logo/cropped_circle_image.png")}
         alt="logo"
         width={100}
         height={100}

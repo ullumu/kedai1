@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ExpertChiefType } from "@/types/expertchief";
 import ChiefDetailSkeleton from "../../Skeleton/ChiefDetail";
 import { ExpertChiefData } from "@/data/data";
+import { imagePath } from "@/utils/imagePath";
 
 const Expert = () => {
   const chiefDetail = ExpertChiefData;
@@ -62,15 +63,15 @@ const Expert = () => {
                   <div className="m-3 my-10 p-10 text-center backdrop-blur-md bg-white/50 rounded-3xl">
                     <div className="relative">
                       <Image
-                        src={items.imgSrc}
-                        alt="gaby"
+                        src={imagePath(items.imgSrc)}
+                        alt={items.name}
                         width={362}
                         height={262}
                         className="inline-block m-auto w-auto"
                       />
                       <div className="absolute top-[75%] -right-[10%]">
                         <Image
-                          src={"/images/Expert/Linkedin.svg"}
+                          src={imagePath("/images/Expert/Linkedin.svg")}
                           alt="linkedin"
                           width={220}
                           height={120}

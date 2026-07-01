@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { FeaturesType } from "@/types/features";
 import FeaturesSkeleton from "../../Skeleton/Features";
 import { FeaturesData } from "@/data/data";
+import { imagePath } from "@/utils/imagePath";
 
 const Features = () => {
   const features = FeaturesData;
@@ -33,7 +34,7 @@ const Features = () => {
                 >
                   <div className="rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] left-[0%]">
                     <Image
-                      src={items.imgSrc}
+                      src={imagePath(items.imgSrc)}
                       alt={items.imgSrc}
                       width={510}
                       height={10}

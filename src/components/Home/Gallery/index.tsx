@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import { GalleryImagesType } from "@/types/galleryimage";
 import { FullMenuType } from "@/types/fullmenu";
 import { GalleryImagesData, FullMenuData } from "@/data/data";
+import { imagePath } from "@/utils/imagePath";
 
 const Gallery = () => {
   const galleryImages = GalleryImagesData;
@@ -44,7 +45,7 @@ const Gallery = () => {
                     className="overflow-hidden rounded-3xl mb-6 relative group"
                   >
                     <Image
-                      src={item.src}
+                      src={imagePath(item.src)}
                       alt={item.name}
                       width={600}
                       height={500}

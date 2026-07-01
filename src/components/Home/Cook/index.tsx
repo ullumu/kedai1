@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { imagePath } from "@/utils/imagePath";
 
 const Cook = () => {
   return (
@@ -17,7 +18,7 @@ const Cook = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5">
           <div className="lg:col-span-6 flex lg:justify-start justify-center">
             <Image
-              src="/images/Logo/Logo-kedaig23.svg"
+              src={imagePath("/images/Logo/Logo-kedaig23.svg")}
               alt="nothing"
               width={636}
               height={808}
