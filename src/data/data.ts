@@ -17,7 +17,7 @@ export const HalalCertificationData = {
 };
 
 export const HeaderData: HeaderItem[] = [
-  { label: "About Us", href: "/#aboutus" },
+  { label: "Tentang Kami", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
 ];
 
@@ -110,26 +110,22 @@ export const FullMenuData: FullMenuType[] = [
     price: "",
     description: "",
   },
-  
 ];
 
 export const FooterLinkData: FooterLinkType[] = [
   {
-    section: "Company",
+    section: "Perusahaan",
     links: [
-      { label: "Home", href: "/" },
-      { label: "About Us", href: "/#aboutus" },
+      { label: "Beranda", href: "/" },
+      { label: "Tentang Kami", href: "/#aboutus" },
       { label: "Menu", href: "/#menu" },
     ],
   },
   {
-    section: "Support",
+    section: "Dukungan",
     links: [
-      { label: "Help/FAQ", href: "/" },
-      // { label: "Press", href: "/" },
-      // { label: "Affiliates", href: "/" },
-      // { label: "Hotel owners", href: "/" },
-      { label: "Partners", href: "/" },
+      { label: "Bantuan/FAQ", href: "/" },
+      { label: "Mitra", href: "/" },
     ],
   },
 ];

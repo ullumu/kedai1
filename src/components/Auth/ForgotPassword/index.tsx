@@ -16,7 +16,7 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     if (!email) {
-      toast.error("Please enter your email address.");
+      toast.error("Silakan masukkan alamat email Anda.");
 
       return;
     }
@@ -29,7 +29,7 @@ const ForgotPassword = () => {
       });
 
       if (res.status === 404) {
-        toast.error("User not found.");
+        toast.error("Pengguna tidak ditemukan.");
         return;
       }
 
@@ -91,7 +91,7 @@ const ForgotPassword = () => {
                     type="submit"
                     className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                   >
-                    Send Email {loader && <Loader />}
+                    Kirim Email {loader && <Loader />}
                   </button>
                 </div>
               </form>

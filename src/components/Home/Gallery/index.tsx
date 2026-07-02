@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import GalleryImagesSkeleton from "../../Skeleton/GalleryImages";
 import { Icon } from "@iconify/react";
-import { GalleryImagesType } from "@/types/galleryimage";
-import { FullMenuType } from "@/types/fullmenu";
 import { GalleryImagesData, FullMenuData } from "@/data/data";
 import { imagePath } from "@/utils/imagePath";
 
@@ -24,9 +22,9 @@ const Gallery = () => {
       <div className="container">
         <div className="text-center">
           <p className="text-primary text-lg font-normal mb-3 tracking-widest uppercase">
-            Our Menu
+            Menu Kami
           </p>
-          <h2>Explore Our Signature Dishes</h2>
+          <h2>Jelajahi Hidangan Signature Kami</h2>
         </div>
         <div className="my-16 px-6">
           <Masonry
@@ -34,7 +32,6 @@ const Gallery = () => {
             className="flex gap-6"
             columnClassName="masonry-column"
           >
-            {/* Map through images */}
             {loading
               ? Array.from({ length: 4 }).map((_, i) => (
                   <GalleryImagesSkeleton key={i} />
@@ -57,13 +54,13 @@ const Gallery = () => {
                       </p>
                       <div className="flex items-center justify-between w-full">
                         <p className="text-white lg:text-2xl text-xl">
-                          $ {item.price}
+                          Rp {item.price}
                         </p>
                         <Link
                           href="#"
                           className="text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm"
                         >
-                          Learn More
+                          Pelajari Lebih Lanjut
                         </Link>
                       </div>
                     </div>
@@ -76,9 +73,8 @@ const Gallery = () => {
             className="px-6 py-2 border border-primary rounded-full text-base font-medium text-white bg-primary hover:bg-primary/20 hover:text-primary hover:cursor-pointer transition ease-in-out duration-300"
             onClick={openMenu}
           >
-            View More
+            Lihat Lebih Banyak
           </button>
-          {/* menu pop-up */}
           {isMenuOpen && (
             <div
               className="fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50 px-4"
@@ -100,16 +96,15 @@ const Gallery = () => {
                   />
                 </button>
                 <p className="text-black text-2xl font-semibold mb-4">
-                  Full Menu
+                  Menu Lengkap
                 </p>
-                {/* table */}
                 <div className="max-h-[350px] overflow-y-auto">
                   <table className="w-full table-auto border-collapse text-left">
                     <thead className="sticky top-0 bg-neutral-100 z-10">
                       <tr>
-                        <th className="py-3 px-4">Dish</th>
-                        <th className="py-3 px-4">Description</th>
-                        <th className="py-3 px-4">Price</th>
+                        <th className="py-3 px-4">Hidangan</th>
+                        <th className="py-3 px-4">Deskripsi</th>
+                        <th className="py-3 px-4">Harga</th>
                       </tr>
                     </thead>
                     <tbody>

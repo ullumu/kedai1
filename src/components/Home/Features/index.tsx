@@ -1,11 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { Icon } from "@iconify/react";
-import { FeaturesType } from "@/types/features";
-import FeaturesSkeleton from "../../Skeleton/Features";
 import { FeaturesData } from "@/data/data";
 import { imagePath } from "@/utils/imagePath";
+import FeaturesSkeleton from "../../Skeleton/Features";
 
 const Features = () => {
   const features = FeaturesData;
@@ -16,10 +13,10 @@ const Features = () => {
       <div className="container">
         <div className="text-center mb-14">
           <p className="text-primary text-lg font-normal tracking-widest uppercase">
-            Why Choose Us
+            Mengapa Memilih Kami
           </p>
           <h2 className="font-semibold lg:max-w-60% mx-auto mt-3">
-            Experience More Than Just a Meal
+            Rasakan Lebih dari Sekadar Hidangan
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 mt-24">

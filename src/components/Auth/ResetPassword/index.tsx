@@ -55,7 +55,7 @@ const ResetPassword = ({ token }: { token: string }) => {
     setLoader(true);
 
     if (data.newPassword === "") {
-      toast.error("Please enter your password.");
+      toast.error("Silakan masukkan kata sandi.");
       return;
     }
 
@@ -135,7 +135,7 @@ const ResetPassword = ({ token }: { token: string }) => {
                     type="submit"
                     className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
                   >
-                    Save Password {loader && <Loader />}
+                    Simpan Kata Sandi {loader && <Loader />}
                   </button>
                 </div>
               </form>

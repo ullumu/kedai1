@@ -14,7 +14,7 @@ const SignUp = () => {
 
       <span className="z-1 relative my-8 block text-center before:content-[''] before:absolute before:h-px before:w-[40%] before:bg-black/20 before:bg-opacity-60 before:left-0 before:top-3 after:content-[''] after:absolute after:h-px after:w-[40%] after:bg-black/20 after:bg-opacity-60 after:top-3 after:right-0">
         <span className="text-body-secondary relative z-10 inline-block px-3 text-base text-black">
-          OR
+          ATAU
         </span>
       </span>
 
@@ -22,7 +22,7 @@ const SignUp = () => {
         <div className="mb-[22px]">
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Nama"
             name="name"
             required
             className="w-full rounded-md border border-solid bg-transparent px-5 py-3 text-base text-dark outline-hidden transition border-gray-200 placeholder:text-black/30 focus:border-primary focus-visible:shadow-none text-black"
@@ -40,7 +40,7 @@ const SignUp = () => {
         <div className="mb-[22px]">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Kata sandi"
             name="password"
             required
             className="w-full rounded-md border border-solid bg-transparent px-5 py-3 text-base text-dark outline-hidden transition border-gray-200 placeholder:text-black/30 focus:border-primary focus-visible:shadow-none text-black"
@@ -51,7 +51,7 @@ const SignUp = () => {
             type="submit"
             className="flex w-full items-center text-18 font-medium text-white justify-center rounded-md bg-primary px-5 py-3 text-darkmode transition duration-300 ease-in-out hover:bg-transparent hover:text-primary border-primary border"
           >
-            Sign Up
+            Daftar
           </button>
         </div>
       </form>
@@ -68,9 +68,9 @@ const SignUp = () => {
       </p>
 
       <p className="text-body-secondary text-black/60 text-base">
-        Already have an account?
+        Sudah punya akun?
         <Link href="/" className="pl-2 text-primary hover:underline">
-          Sign In
+          Masuk
         </Link>
       </p>
     </>

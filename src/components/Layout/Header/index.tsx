@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                 icon="solar:phone-bold"
                 className="text-primary text-3xl lg:text-2xl inline-block me-2"
               />
-              noTelp
+              No. Telp
             </Link>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}

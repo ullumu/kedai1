@@ -17,7 +17,7 @@ const Footer: FC = () => {
           <div className="col-span-2">
             <Logo />
             <p className="text-sm font-medium text-grey my-5 max-w-70%">
-              chef
+              Koki dan hidangan khas kami.
             </p>
             <div className="flex gap-6 items-center">
               <Link
@@ -85,9 +85,7 @@ const Footer: FC = () => {
                   icon="solar:point-on-map-perspective-bold"
                   className="text-primary text-3xl lg:text-2xl inline-block me-2"
                 />
-                <p className="text-black text-base">
-                  Alamat
-                </p>
+                <p className="text-black text-base">Denpasar, Bali</p>
               </div>
               <Link href="tel:+1(909) 235-9814">
                 <div className="flex">
@@ -96,7 +94,7 @@ const Footer: FC = () => {
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
                   />
                   <p className="text-black/60 hover:text-black text-base">
-                    No Telp
+                    +62 812-3456-7890
                   </p>
                 </div>
               </Link>
@@ -107,7 +105,7 @@ const Footer: FC = () => {
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
                   />
                   <p className="text-black/60 hover:text-black text-base">
-                   Email
+                    hello@kedairumahg23.com
                   </p>
                 </div>
               </Link>

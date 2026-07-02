@@ -8,52 +8,52 @@ import { FooterLinkType } from "@/types/footerlink";
 import { FullMenuType } from "@/types/fullmenu";
 
 const HeaderData: HeaderItem[] = [
-  { label: "About Us", href: "/#aboutus" },
+  { label: "Tentang Kami", href: "/#aboutus" },
   { label: "Menu", href: "/#menu" },
-  { label: "Reserve Table", href: "/#reserve" },
-  { label: "Docs", href: "/documentation" },
+  { label: "Pesan Meja", href: "/#reserve" },
+  { label: "Dokumentasi", href: "/documentation" },
 ];
 
 const FeaturesData: FeaturesType[] = [
   {
     imgSrc: "/images/Features/featureOne.svg",
-    heading: "Elegant Dining Atmosphere",
+    heading: "Suasana Makan yang Elegan",
     subheading:
-      "Enjoy a warm, refined space perfect for intimate dinners or small group gatherings.",
+      "Nikmati suasana hangat dan berkelas yang cocok untuk makan malam romantis atau kumpul bersama teman.",
   },
   {
     imgSrc: "/images/Features/featureThree.svg",
-    heading: "Signature Chef Creations",
+    heading: "Karya Koki Signature",
     subheading:
-      "Taste one-of-a-kind dishes crafted with passion by our top culinary team.",
+      "Rasakan hidangan unik yang dibuat dengan penuh semangat oleh tim kuliner terbaik kami.",
   },
   {
     imgSrc: "/images/Features/featureTwo.svg",
-    heading: "Fresh, Local Ingredients",
+    heading: "Bahan Segar dan Lokal",
     subheading:
-      "We use locally sourced goods daily for unmatched taste and quality.",
+      "Kami menggunakan bahan-bahan lokal setiap hari untuk rasa dan kualitas terbaik.",
   },
   {
     imgSrc: "/images/Features/featureFour.svg",
-    heading: "Hassle-Free Reservations",
+    heading: "Reservasi Tanpa Ribet",
     subheading:
-      "Reserve online in seconds or walk in anytime — we’re ready when you are.",
+      "Reservasi online dalam hitungan detik atau datang langsung kapan saja — kami siap melayani Anda.",
   },
 ];
 
 const ExpertChiefData: ExpertChiefType[] = [
   {
-    profession: "Senior Chef",
+    profession: "Koki Senior",
     name: "Marco Benton",
     imgSrc: "/images/Expert/boyone.png",
   },
   {
-    profession: "Junior Chef",
+    profession: "Koki Junior",
     name: "Elena Rivera",
     imgSrc: "/images/Expert/girl.png",
   },
   {
-    profession: "Junior Chef",
+    profession: "Koki Junior",
     name: "John Doe",
     imgSrc: "/images/Expert/boytwo.png",
   },
@@ -62,85 +62,86 @@ const ExpertChiefData: ExpertChiefType[] = [
 const GalleryImagesData: GalleryImagesType[] = [
   {
     src: "/images/Gallery/foodone.webp",
-    name: "Caesar Salad(187 Kcal)",
+    name: "Salad Caesar (187 Kkal)",
     price: 35,
   },
   {
     src: "/images/Gallery/foodtwo.webp",
-    name: "Christmas salad(118 Kcal)",
+    name: "Salad Natal (118 Kkal)",
     price: 17,
   },
   {
     src: "/images/Gallery/foodthree.webp",
-    name: "Sauteed mushrooms with pumpkin bowl(238 kcal)",
+    name: "Jamur tumis dengan mangkuk labu (238 kkal)",
     price: 45,
   },
   {
     src: "/images/Gallery/foodfour.webp",
-    name: "BBQ Chicken Feast Pizza(272 kcal)",
+    name: "Pizza BBQ Chicken Feast (272 kkal)",
     price: 27,
   },
 ];
 
 const FullMenuData: FullMenuType[] = [
   {
-    name: "Grilled Salmon",
-    price: "$18.99",
-    description: "Served with lemon butter sauce and grilled vegetables.",
+    name: "Salmon Panggang",
+    price: "Rp 95.000",
+    description: "Disajikan dengan saus mentega lemon dan sayuran panggang.",
   },
   {
-    name: "Caesar Salad",
-    price: "$9.99",
-    description: "Crisp romaine with parmesan, croutons, and Caesar dressing.",
+    name: "Salad Caesar",
+    price: "Rp 55.000",
+    description: "Romaine renyah dengan parmesan, crouton, dan saus Caesar.",
   },
   {
-    name: "Margherita Pizza",
-    price: "$13.49",
-    description: "Classic pizza with tomato, mozzarella, and fresh basil.",
+    name: "Pizza Margherita",
+    price: "Rp 75.000",
+    description: "Pizza klasik dengan tomat, mozzarella, dan basil segar.",
   },
   {
-    name: "Tomato Basil Soup",
-    price: "$6.99",
-    description: "Creamy tomato soup with a hint of garlic and fresh basil.",
-  },
-  {
-    name: "Chocolate Lava Cake",
-    price: "$7.99",
+    name: "Sup Tomat Basil",
+    price: "Rp 40.000",
     description:
-      "Warm chocolate cake with a molten center served with vanilla ice cream.",
+      "Sup tomat krimi dengan sentuhan bawang putih dan basil segar.",
+  },
+  {
+    name: "Kue Cokelat Lava",
+    price: "Rp 45.000",
+    description:
+      "Kue cokelat hangat dengan pusat meleleh disajikan dengan es krim vanila.",
   },
   {
     name: "Spaghetti Carbonara",
-    price: "$15.25",
+    price: "Rp 85.000",
     description:
-      "Spaghetti tossed with eggs, pancetta, parmesan, and black pepper.",
+      "Spaghetti dicampur telur, pancetta, parmesan, dan lada hitam.",
   },
   {
     name: "Tiramisu",
-    price: "$8.50",
+    price: "Rp 50.000",
     description:
-      "Layered espresso-soaked ladyfingers with mascarpone and cocoa.",
+      "Lapisan biskuit yang direndam espresso dengan mascarpone dan kakao.",
   },
 ];
 
 const FooterLinkData: FooterLinkType[] = [
   {
-    section: "Company",
+    section: "Perusahaan",
     links: [
-      { label: "Home", href: "/" },
-      { label: "About Us", href: "/#aboutus" },
+      { label: "Beranda", href: "/" },
+      { label: "Tentang Kami", href: "/#aboutus" },
       { label: "Menu", href: "/#menu" },
-      { label: "Reserve Table", href: "/#reserve" },
+      { label: "Pesan Meja", href: "/#reserve" },
     ],
   },
   {
-    section: "Support",
+    section: "Dukungan",
     links: [
-      { label: "Help/FAQ", href: "/" },
+      { label: "Bantuan/FAQ", href: "/" },
       { label: "Press", href: "/" },
-      { label: "Affiliates", href: "/" },
-      { label: "Hotel owners", href: "/" },
-      { label: "Partners", href: "/" },
+      { label: "Afiliasi", href: "/" },
+      { label: "Pemilik hotel", href: "/" },
+      { label: "Mitra", href: "/" },
     ],
   },
 ];

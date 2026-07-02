@@ -1,10 +1,8 @@
 "use client";
 import Slider from "react-slick";
-import React from "react";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ExpertChiefType } from "@/types/expertchief";
 import ChiefDetailSkeleton from "../../Skeleton/ChiefDetail";
 import { ExpertChiefData } from "@/data/data";
 import { imagePath } from "@/utils/imagePath";
@@ -49,9 +47,9 @@ const Expert = () => {
       <div className="container">
         <div className="text-center">
           <p className="text-primary text-lg font-normal mb-3 tracking-widest uppercase">
-            Our Chefs
+            Koki Kami
           </p>
-          <h2>Meet Our Culinary Experts</h2>
+          <h2>Temui Ahli Kuliner Kami</h2>
         </div>
         <Slider {...settings}>
           {loading
