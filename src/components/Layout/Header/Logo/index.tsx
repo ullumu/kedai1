@@ -13,7 +13,7 @@ const Logo: React.FC = () => {
         className="w-[90px] h-[90px]  "
         quality={100}
       />
-      <p className="text-black text-2xl font-semibold ">Kedai Rumah G23</p>
+      <p className="text-black text-xl font-semibold ">Kedai Rumah G23</p>
     </Link>
   );
 };

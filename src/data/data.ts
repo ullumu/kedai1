@@ -68,27 +68,27 @@ export const ExpertChiefData: ExpertChiefType[] = [
 
 export const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: "/images/Gallery/food1.jpg",
+    src: "/images/Gallery/food1.png",
     name: "",
     price: 0,
   },
   {
-    src: "/images/Gallery/food2.jpg",
+    src: "/images/Gallery/food2.png",
     name: "",
     price: 0,
   },
   {
-    src: "/images/Gallery/food3.jpg",
+    src: "/images/Gallery/food3.png",
     name: "",
     price: 0,
   },
   {
-    src: "/images/Gallery/food4.jpg",
+    src: "/images/Gallery/food4.png",
     name: "",
     price: 0,
   },
   {
-    src: "/images/Gallery/food5.jpg",
+    src: "/images/Gallery/food5.png",
     name: "",
     price: 0,
   },
