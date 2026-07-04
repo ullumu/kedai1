@@ -2,11 +2,65 @@
 import Image from "next/image";
 import Masonry from "react-masonry-css";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GalleryImagesSkeleton from "../../Skeleton/GalleryImages";
 import { Icon } from "@iconify/react";
 import { GalleryImagesData, FullMenuData } from "@/data/data";
 import { imagePath } from "@/utils/imagePath";
+import { GalleryImagesType } from "@/types/galleryimage";
+
+const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
+  const slides = Array.from(new Set([item.src, ...(item.images ?? [])]));
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (slides.length <= 1) return;
+
+    const interval = window.setInterval(() => {
+      setActiveImageIndex((prev) => (prev + 1) % slides.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, [slides.length]);
+
+  return (
+    <div className="overflow-hidden rounded-3xl mb-6 relative group">
+      <div className="relative w-full h-full">
+        <Image
+          src={imagePath(slides[activeImageIndex])}
+          alt={item.name}
+          width={600}
+          height={500}
+          className="object-cover w-full h-full"
+        />
+        {slides.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+            {slides.map((_, dotIndex) => (
+              <span
+                key={dotIndex}
+                className={`h-2.5 w-2.5 rounded-full transition-all ${
+                  dotIndex === activeImageIndex ? "bg-white" : "bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+      <div className="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end">
+        <p className="text-white lg:text-2xl text-xl">{item.name}</p>
+        <div className="flex items-center justify-between w-full">
+          <p className="text-white lg:text-2xl text-xl"></p>
+          <Link
+            href="#"
+            className="text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm"
+          >
+            Pelajari Lebih Lanjut
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Gallery = () => {
   const galleryImages = GalleryImagesData;
@@ -37,34 +91,7 @@ const Gallery = () => {
                   <GalleryImagesSkeleton key={i} />
                 ))
               : galleryImages.map((item, index) => (
-                  <div
-                    key={index}
-                    className="overflow-hidden rounded-3xl mb-6 relative group"
-                  >
-                    <Image
-                      src={imagePath(item.src)}
-                      alt={item.name}
-                      width={600}
-                      height={500}
-                      className="object-cover w-full h-full"
-                    />
-                    <div className="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end">
-                      <p className="text-white lg:text-2xl text-xl">
-                        {item.name}
-                      </p>
-                      <div className="flex items-center justify-between w-full">
-                        <p className="text-white lg:text-2xl text-xl">
-                          {/* Rp {item.price} */}
-                        </p>
-                        <Link
-                          href="#"
-                          className="text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm"
-                        >
-                          Pelajari Lebih Lanjut
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                  <GalleryCard key={`${item.name}-${index}`} item={item} />
                 ))}
           </Masonry>
         </div>
@@ -98,7 +125,7 @@ const Gallery = () => {
                 <p className="text-black text-2xl font-semibold mb-4">
                   Menu Lengkap
                 </p>
-                <div className="max-h-[350px] overflow-y-auto">
+                <div className="max-h-87.5 overflow-y-auto">
                   <table className="w-full table-auto border-collapse text-left">
                     <thead className="sticky top-0 bg-neutral-100 z-10">
                       <tr>

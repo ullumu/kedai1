@@ -70,32 +70,32 @@ export const GalleryImagesData: GalleryImagesType[] = [
   {
     src: "/images/Gallery/batagor-tenggiri.png",
     name: "Batagor Tenggiri",
-    // price: 0,
+    // images: ["/images/Gallery/batagor-tenggiri-2.png"],
   },
   {
     src: "/images/Gallery/cwie-mie-karet.png",
     name: "Cwie Mie Karet",
-    // price: 0,
+    // images: ["/images/Gallery/cwie-mie-karet.png"],
   },
   {
     src: "/images/Gallery/pangsit-chili-oil.png",
     name: "Pangsit Chili Oil",
-    // price: 0,
+    // images: ["/images/Gallery/pangsit-chili-oil.png"],
   },
   {
     src: "/images/Gallery/siomay-dimsum-chili-oil.png",
     name: "Siomay Dimsum Chili Oil",
-    // price: 0,
+    // images: ["/images/Gallery/siomay-dimsum-chili-oil.png"],
   },
   {
     src: "/images/Gallery/tahu-baso-tenggiri.png",
     name: "Tahu Baso Tenggiri",
-    // price: 0,
+    // images: ["/images/Gallery/tahu-baso-tenggiri.png"],
   },
   {
     src: "/images/Gallery/teri-balado.png",
     name: "Teri Balado",
-    // price: 0,
+    // images: ["/images/Gallery/teri-balado.png"],
   },
 ];
 
@@ -105,16 +105,7 @@ export const FullMenuData: FullMenuType[] = [
     price: "",
     description: "",
   },
-  {
-    name: "",
-    price: "",
-    description: "",
-  },
-  {
-    name: "",
-    price: "",
-    description: "",
-  },
+ 
 ];
 
 export const FooterLinkData: FooterLinkType[] = [

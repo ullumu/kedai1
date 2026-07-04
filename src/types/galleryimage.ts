@@ -1,5 +1,6 @@
 export type GalleryImagesType = {
-  src: string
-  name: string
+  src: string;
+  name: string;
+  images?: string[];
   // price: number
-}
+};
