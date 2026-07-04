@@ -68,29 +68,34 @@ export const ExpertChiefData: ExpertChiefType[] = [
 
 export const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: "/images/Gallery/food1.png",
-    name: "",
-    price: 0,
+    src: "/images/Gallery/batagor-tenggiri.png",
+    name: "Batagor Tenggiri",
+    // price: 0,
   },
   {
-    src: "/images/Gallery/food2.png",
-    name: "",
-    price: 0,
+    src: "/images/Gallery/cwie-mie-karet.png",
+    name: "Cwie Mie Karet",
+    // price: 0,
   },
   {
-    src: "/images/Gallery/food3.png",
-    name: "",
-    price: 0,
+    src: "/images/Gallery/pangsit-chili-oil.png",
+    name: "Pangsit Chili Oil",
+    // price: 0,
   },
   {
-    src: "/images/Gallery/food4.png",
-    name: "",
-    price: 0,
+    src: "/images/Gallery/siomay-dimsum-chili-oil.png",
+    name: "Siomay Dimsum Chili Oil",
+    // price: 0,
   },
   {
-    src: "/images/Gallery/food5.png",
-    name: "",
-    price: 0,
+    src: "/images/Gallery/tahu-baso-tenggiri.png",
+    name: "Tahu Baso Tenggiri",
+    // price: 0,
+  },
+  {
+    src: "/images/Gallery/teri-balado.png",
+    name: "Teri Balado",
+    // price: 0,
   },
 ];
 

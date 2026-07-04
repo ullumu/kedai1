@@ -14,7 +14,7 @@ const Hero = () => {
             </h2>
             <p className="text-black/55 text-lg font-normal mb-10 lg:text-start text-center">
               Kedai Rumah G23 adalah produsen makanan dan minuman siap saji,
-              sehat, dan halal yang berbasis di Denpasar, Bali. Didirikan pada
+              sehat, dan halal yang berbasis di Malang, Jawa Timur. Didirikan pada
               tahun 2019, perjalanan kami dimulai dari kecintaan terhadap dunia
               kuliner, termasuk kuliner Indonesia yang kaya akan cita rasa
               rempah. Seiring perkembangan zaman, masyarakat perkotaan yang

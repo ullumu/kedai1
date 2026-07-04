@@ -46,7 +46,7 @@ export const Introduction = () => {
   ];
   return (
     <>
-      <div id="version" className="md:scroll-m-[180px] scroll-m-28">
+      <div id="version" className="md:scroll-m-45 scroll-m-28">
         {docNavbarOpen && (
           <div
             className="fixed top-0 left-0 w-full h-full bg-black/50 z-40"
@@ -86,10 +86,7 @@ export const Introduction = () => {
             })}
         </div>
         <div className="mt-5">
-          <p className="text-base font-medium text-black/60">
-            Chef s Kitchen Tailwind NextJs Template is built with Tailwindcss
-            and Nextjs.
-          </p>
+          <p className="text-base font-medium text-black/60"></p>
           <p className="text-base font-medium text-black/60">
             These theme is ready to use and you can totally customize as per
             your requirement.

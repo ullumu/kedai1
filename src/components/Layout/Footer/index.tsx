@@ -85,7 +85,7 @@ const Footer: FC = () => {
                   icon="solar:point-on-map-perspective-bold"
                   className="text-primary text-3xl lg:text-2xl inline-block me-2"
                 />
-                <p className="text-black text-base">Denpasar, Bali</p>
+                <p className="text-black text-base">Malang, Jawa Timur</p>
               </div>
               <Link href="tel:+1(909) 235-9814">
                 <div className="flex">
@@ -114,7 +114,7 @@ const Footer: FC = () => {
         </div>
         <div className="border-t border-grey/15 py-5 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
           {/* <p className="text-sm text-black/70">
-            @2025 - Chefs kitchen. All Rights Reserved by{" "}
+            @2025 - kedai. All Rights Reserved by{" "}
             <Link
               href="https://getnextjstemplates.com/"
               className="hover:text-primary hover:underline"

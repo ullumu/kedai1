@@ -54,7 +54,7 @@ const Gallery = () => {
                       </p>
                       <div className="flex items-center justify-between w-full">
                         <p className="text-white lg:text-2xl text-xl">
-                          Rp {item.price}
+                          {/* Rp {item.price} */}
                         </p>
                         <Link
                           href="#"

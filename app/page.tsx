@@ -9,7 +9,7 @@ import Certification from "@/components/Home/Certification";
 import { Metadata } from "next";
 // import ContactForm from "@/components/Contact/Form";
 export const metadata: Metadata = {
-  title: "Kitchen",
+  title: "Kedai Rumah G23",
 };
 
 export default function Home() {
