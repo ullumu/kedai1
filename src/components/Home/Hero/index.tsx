@@ -1,9 +1,19 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { imagePath } from "@/utils/imagePath";
 
 const Hero = () => {
+  const handleViewMenu = () => {
+    const menuSection = document.getElementById("menu");
+
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.pushState(null, "", `${window.location.pathname}#menu`);
+      return;
+    }
+
+    window.location.href = `${window.location.pathname}#menu`;
+  };
   return (
     <section id="home-section" className="bg-gray-50">
       <div className="container xl:pt-7 pt-16">
@@ -14,9 +24,9 @@ const Hero = () => {
             </h2>
             <p className="text-black/55 text-lg font-normal mb-10 lg:text-start text-center">
               Kedai Rumah G23 adalah produsen makanan dan minuman siap saji,
-              sehat, dan halal yang berbasis di Malang, Jawa Timur. Didirikan pada
-              tahun 2019, perjalanan kami dimulai dari kecintaan terhadap dunia
-              kuliner, termasuk kuliner Indonesia yang kaya akan cita rasa
+              sehat, dan halal yang berbasis di Malang, Jawa Timur. Didirikan
+              pada tahun 2019, perjalanan kami dimulai dari kecintaan terhadap
+              dunia kuliner, termasuk kuliner Indonesia yang kaya akan cita rasa
               rempah. Seiring perkembangan zaman, masyarakat perkotaan yang
               dinamis dan praktis menuntut kami untuk menciptakan hidangan siap
               saji yang bisa dinikmati kapan saja, di mana saja, oleh siapa
@@ -27,11 +37,13 @@ const Hero = () => {
               internasional.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
-              <Link href="/#menu">
-                <button className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300">
-                  Lihat Menu
-                </button>
-              </Link>
+              <button
+                type="button"
+                onClick={handleViewMenu}
+                className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300"
+              >
+                Lihat Menu
+              </button>
             </div>
           </div>
           <div className="lg:col-span-6 flex justify-center relative">

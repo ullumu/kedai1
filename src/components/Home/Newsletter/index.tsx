@@ -48,11 +48,11 @@ const Newsletter = () => {
           <div className="md:col-span-5 relative hidden md:block">
             <div>
               <Image
-                src={imagePath("/images/Newsletter/food3-1.png")}
+                src={imagePath("/images/Gallery/teri-balado.png")}
                 alt="soup-image"
                 width={626}
                 height={602}
-                className="-mt-24"
+                className="-mt-10"
               />
             </div>
             {/* <div className='absolute top-[78%]'>
