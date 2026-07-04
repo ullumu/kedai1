@@ -63,16 +63,18 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-2 lg:gap-3">
-            <Link
-              href="#"
+            <a
+              href="https://wa.me/62819333703167"
+              target="_blank"
+              rel="noreferrer"
               className="text-lg font-medium hover:text-primary hidden xl:block"
             >
               <Icon
                 icon="solar:phone-bold"
                 className="text-primary text-3xl lg:text-2xl inline-block me-2"
               />
-              No. Telp
-            </Link>
+              081933703167
+            </a>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="block lg:hidden p-2 rounded-lg"
@@ -110,16 +112,18 @@ const Header: React.FC = () => {
               />
             </button>
           </div>
-          <Link
-            href="#"
+          <a
+            href="https://wa.me/62819333703167"
+            target="_blank"
+            rel="noreferrer"
             className="text-lg font-medium hover:text-primary block md:hidden mt-6 p-4"
           >
             <Icon
               icon="solar:phone-bold"
               className="text-primary text-3xl lg:text-2xl inline-block me-2"
             />
-            noTelp
-          </Link>
+            0819-3370-3167
+          </a>
           <nav className="flex flex-col items-start p-4">
             {headerLink.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />

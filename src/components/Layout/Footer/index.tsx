@@ -87,19 +87,23 @@ const Footer: FC = () => {
                 />
                 <p className="text-black text-base">Malang, Jawa Timur</p>
               </div>
-              <Link href="tel:+1(909) 235-9814">
+              <a
+                href="https://wa.me/62819333703167"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex">
                   <Icon
                     icon="solar:phone-bold"
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
                   />
                   <p className="text-black/60 hover:text-black text-base">
-                    +62 812-3456-7890
+                    0819-3370-3167
                   </p>
                 </div>
-              </Link>
+              </a>
               <Link href="/">
-                <div className="flex">
+                {/* <div className="flex">
                   <Icon
                     icon="solar:mailbox-bold"
                     className="text-primary text-3xl lg:text-2xl inline-block me-2"
@@ -107,7 +111,7 @@ const Footer: FC = () => {
                   <p className="text-black/60 hover:text-black text-base">
                     hello@kedairumahg23.com
                   </p>
-                </div>
+                </div> */}
               </Link>
             </div>
           </div>
