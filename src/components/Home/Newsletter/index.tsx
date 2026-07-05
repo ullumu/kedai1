@@ -28,7 +28,7 @@ const Newsletter = () => {
                   />
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                     <a
-                      href="https://wa.me/081933703167"
+                      href="https://wa.me/6281933703167"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-1 bg-gray-900 hover:scale-110 duration-300 rounded-full hover:cursor-pointer"
