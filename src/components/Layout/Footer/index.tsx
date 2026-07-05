@@ -88,7 +88,7 @@ const Footer: FC = () => {
                 <p className="text-black text-base">Malang, Jawa Timur</p>
               </div>
               <a
-                href="https://wa.me/62819333703167"
+                href="https://wa.me/081933703167"
                 target="_blank"
                 rel="noreferrer"
               >

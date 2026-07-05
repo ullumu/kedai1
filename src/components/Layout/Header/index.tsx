@@ -66,7 +66,7 @@ const Header: React.FC = () => {
           </nav>
           <div className="flex items-center gap-2 lg:gap-3">
             <a
-              href="https://wa.me/62819333703167"
+              href="https://wa.me/081933703167"
               target="_blank"
               rel="noreferrer"
               aria-label="Hubungi kami via WhatsApp"
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             </button>
           </div>
           <a
-            href="https://wa.me/62819333703167"
+            href="https://wa.me/081933703167"
             target="_blank"
             rel="noreferrer"
             aria-label="Hubungi kami via WhatsApp"
