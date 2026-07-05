@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import HeaderLink from "./Navigation/HeaderLink";
 import MobileHeaderLink from "./Navigation/MobileHeaderLink";
@@ -20,15 +19,18 @@ const Header: React.FC = () => {
     setSticky(window.scrollY >= 20);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      mobileMenuRef.current &&
-      !mobileMenuRef.current.contains(event.target as Node) &&
-      navbarOpen
-    ) {
-      setNavbarOpen(false);
-    }
-  };
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        navbarOpen
+      ) {
+        setNavbarOpen(false);
+      }
+    },
+    [navbarOpen],
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +39,7 @@ const Header: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navbarOpen]);
+  }, [handleClickOutside, navbarOpen]);
 
   useEffect(() => {
     document.body.style.overflow = navbarOpen ? "hidden" : "";
@@ -67,13 +69,11 @@ const Header: React.FC = () => {
               href="https://wa.me/62819333703167"
               target="_blank"
               rel="noreferrer"
-              className="text-lg font-medium hover:text-primary hidden xl:block"
+              aria-label="Hubungi kami via WhatsApp"
+              className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952]"
             >
-              <Icon
-                icon="solar:phone-bold"
-                className="text-primary text-3xl lg:text-2xl inline-block me-2"
-              />
-              081933703167
+              <Icon icon="mdi:whatsapp" className="text-lg" />
+              <span>Hubungi Kami</span>
             </a>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
@@ -116,13 +116,11 @@ const Header: React.FC = () => {
             href="https://wa.me/62819333703167"
             target="_blank"
             rel="noreferrer"
-            className="text-lg font-medium hover:text-primary block md:hidden mt-6 p-4"
+            aria-label="Hubungi kami via WhatsApp"
+            className="mt-6 ml-4 flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952]"
           >
-            <Icon
-              icon="solar:phone-bold"
-              className="text-primary text-3xl lg:text-2xl inline-block me-2"
-            />
-            0819-3370-3167
+            <Icon icon="mdi:whatsapp" className="text-xl" />
+            <span>Hubungi Kami</span>
           </a>
           <nav className="flex flex-col items-start p-4">
             {headerLink.map((item, index) => (
