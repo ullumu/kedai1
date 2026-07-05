@@ -68,34 +68,40 @@ export const ExpertChiefData: ExpertChiefType[] = [
 
 export const GalleryImagesData: GalleryImagesType[] = [
   {
+    src: "/images/Gallery/teri-balado.png",
+    name: "Teri Balado",
+    // images: ["/images/Gallery/teri-balado.png"],
+    variants: ["Pedas", "Asin"],
+  },
+  // #2
+  {
     src: "/images/Gallery/batagor-tenggiri.png",
     name: "Batagor Tenggiri",
     // images: ["/images/Gallery/batagor-tenggiri-2.png"],
   },
-  {
-    src: "/images/Gallery/cwie-mie-karet.png",
-    name: "Cwie Mie Karet",
-    // images: ["/images/Gallery/cwie-mie-karet.png"],
-  },
-  {
-    src: "/images/Gallery/pangsit-chili-oil.png",
-    name: "Pangsit Chili Oil",
-    // images: ["/images/Gallery/pangsit-chili-oil.png"],
-  },
-  {
-    src: "/images/Gallery/siomay-dimsum-chili-oil.png",
-    name: "Siomay Dimsum Chili Oil",
-    // images: ["/images/Gallery/siomay-dimsum-chili-oil.png"],
-  },
+  // #3
   {
     src: "/images/Gallery/tahu-baso-tenggiri.png",
     name: "Tahu Baso Tenggiri",
     // images: ["/images/Gallery/tahu-baso-tenggiri.png"],
   },
+  // #4
   {
-    src: "/images/Gallery/teri-balado.png",
-    name: "Teri Balado",
-    // images: ["/images/Gallery/teri-balado.png"],
+    src: "/images/Gallery/siomay-dimsum-chili-oil.png",
+    name: "Siomay Dimsum Chili Oil",
+    // images: ["/images/Gallery/siomay-dimsum-chili-oil.png"],
+  },
+  // #5
+  {
+    src: "/images/Gallery/cwie-mie-karet.png",
+    name: "Cwie Mie Karet",
+    // images: ["/images/Gallery/cwie-mie-karet.png"],
+  },
+  // #6
+  {
+    src: "/images/Gallery/pangsit-chili-oil.png",
+    name: "Pangsit Chili Oil",
+    // images: ["/images/Gallery/pangsit-chili-oil.png"],
   },
 ];
 
@@ -105,7 +111,6 @@ export const FullMenuData: FullMenuType[] = [
     price: "",
     description: "",
   },
- 
 ];
 
 export const FooterLinkData: FooterLinkType[] = [

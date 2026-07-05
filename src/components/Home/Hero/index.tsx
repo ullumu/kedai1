@@ -48,10 +48,10 @@ const Hero = () => {
           </div>
           <div className="lg:col-span-6 flex justify-center relative">
             <Image
-              src={imagePath("/images/hero/banner-image4.png")}
+              src={imagePath("/images/hero/banner-image5.png")}
               alt="nothing"
               width={1000}
-              height={805}
+              height={800}
             />
           </div>
         </div>
