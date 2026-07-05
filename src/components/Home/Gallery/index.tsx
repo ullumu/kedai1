@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import Masonry from "react-masonry-css";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import GalleryImagesSkeleton from "../../Skeleton/GalleryImages";
 import { Icon } from "@iconify/react";
 import { GalleryImagesData, FullMenuData } from "@/data/data";
@@ -22,6 +21,13 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
 
     return () => window.clearInterval(interval);
   }, [slides.length]);
+
+  const [showVariants, setShowVariants] = useState(false);
+
+  const handleLearnMore = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setShowVariants((s) => !s);
+  };
 
   return (
     <div className="overflow-hidden rounded-3xl mb-6 relative group">
@@ -48,14 +54,31 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
       </div>
       <div className="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end">
         <p className="text-white lg:text-2xl text-xl">{item.name}</p>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full relative">
           <p className="text-white lg:text-2xl text-xl"></p>
-          <Link
-            href="#"
+          <button
+            onClick={handleLearnMore}
             className="text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm"
           >
             Pelajari Lebih Lanjut
-          </Link>
+          </button>
+
+          {showVariants && (
+            <div className="absolute right-0 bottom-full mb-3 w-56 bg-white text-black rounded-lg shadow-lg p-3 z-50">
+              <p className="text-sm font-semibold mb-2">Varian</p>
+              {item.variants && item.variants.length > 0 ? (
+                <ul className="text-sm">
+                  {item.variants.map((v) => (
+                    <li key={v} className="py-1 border-b last:border-b-0">
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-neutral-500">Tidak ada varian.</p>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
