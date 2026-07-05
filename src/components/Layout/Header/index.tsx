@@ -70,10 +70,10 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="Hubungi kami via WhatsApp"
-              className="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952]"
+              className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952] sm:px-4 md:px-4 lg:px-4 xl:px-4"
             >
               <Icon icon="mdi:whatsapp" className="text-lg" />
-              <span>Hubungi Kami</span>
+              <span className="hidden md:inline">Hubungi Kami</span>
             </a>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
@@ -117,10 +117,10 @@ const Header: React.FC = () => {
             target="_blank"
             rel="noreferrer"
             aria-label="Hubungi kami via WhatsApp"
-            className="mt-6 ml-4 flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952]"
+            className="mt-6 ml-4 flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-3 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-[#1ea952]"
           >
             <Icon icon="mdi:whatsapp" className="text-xl" />
-            <span>Hubungi Kami</span>
+            <span className="hidden md:inline">Hubungi Kami</span>
           </a>
           <nav className="flex flex-col items-start p-4">
             {headerLink.map((item, index) => (
