@@ -1,19 +1,9 @@
 "use client";
 import Image from "next/image";
 import { imagePath } from "@/utils/imagePath";
+import Link from "next/link";
 
 const Hero = () => {
-  const handleViewMenu = () => {
-    const menuSection = document.getElementById("menu");
-
-    if (menuSection) {
-      menuSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.pushState(null, "", `${window.location.pathname}#menu`);
-      return;
-    }
-
-    window.location.href = `${window.location.pathname}#menu`;
-  };
   return (
     <section id="home-section" className="bg-gray-50">
       <div className="container xl:pt-7 pt-16">
@@ -37,13 +27,12 @@ const Hero = () => {
               internasional.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
-              <button
-                type="button"
-                onClick={handleViewMenu}
-                className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300"
-              >
-                Lihat Menu
-              </button>
+              <Link href="/#menu">
+                <button
+                  className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300">
+                  Lihat Menu
+                </button>
+              </Link>
             </div>
           </div>
           <div className="lg:col-span-6 flex justify-center relative">
