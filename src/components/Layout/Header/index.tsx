@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import HeaderLink from "./Navigation/HeaderLink";
@@ -75,6 +76,7 @@ const Header: React.FC = () => {
               <Icon icon="mdi:whatsapp" className="text-lg" />
               <span className="hidden md:inline">Hubungi Kami</span>
             </a>
+
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="block lg:hidden p-2 rounded-lg"
@@ -99,6 +101,7 @@ const Header: React.FC = () => {
             <div>
               <Logo />
             </div>
+            {/*  */}
             <button
               onClick={() => setNavbarOpen(false)}
               className="hover:cursor-pointer"

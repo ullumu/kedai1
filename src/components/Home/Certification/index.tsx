@@ -15,7 +15,9 @@ const Certification = () => {
               alt={halalLogo.alt}
               width={220}
               height={220}
-              className="mx-auto"
+              quality={75}
+              className="mx-auto object-contain"
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
 
