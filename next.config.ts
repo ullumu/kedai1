@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   assetPrefix: "/kedai1",
   images: {
     unoptimized: true,
+    qualities: [100, 75],
   },
   env: {
     NEXT_PUBLIC_BASE_PATH: "/kedai1",
