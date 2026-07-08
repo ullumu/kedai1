@@ -71,7 +71,7 @@ export const GalleryImagesData: GalleryImagesType[] = [
     src: "/images/Gallery/teri-balado.png",
     name: "Teri Balado",
     // images: ["/images/Gallery/teri-balado.png"],
-    variants: ["Pedas", "Asin"],
+    variants: ["Pedas", "Tidak Pedas"],
   },
   // #2
   {
