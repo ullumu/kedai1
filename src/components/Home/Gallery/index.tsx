@@ -88,7 +88,11 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
                   className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-primary hover:bg-primary/20 hover:text-primary sm:px-4"
                 >
                   <Icon
-                    icon={showVariants ? "material-symbols:close-rounded" : "mdi:format-list-bulleted-type"}
+                    icon={
+                      showVariants
+                        ? "material-symbols:close-rounded"
+                        : "mdi:format-list-bulleted-type"
+                    }
                     width={18}
                     height={18}
                   />
