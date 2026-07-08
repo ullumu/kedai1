@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Masonry from "react-masonry-css";
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import GalleryImagesSkeleton from "../../Skeleton/GalleryImages";
 import { Icon } from "@iconify/react";
 import { GalleryImagesData, FullMenuData } from "@/data/data";
@@ -11,6 +11,8 @@ import { GalleryImagesType } from "@/types/galleryimage";
 const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
   const slides = Array.from(new Set([item.src, ...(item.images ?? [])]));
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [showVariants, setShowVariants] = useState(false);
+  const variantsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (slides.length <= 1) return;
@@ -22,7 +24,21 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
     return () => window.clearInterval(interval);
   }, [slides.length]);
 
-  const [showVariants, setShowVariants] = useState(false);
+  useEffect(() => {
+    if (!showVariants) return;
+
+    const handleClickOutside = (event: MouseEvent | globalThis.MouseEvent) => {
+      if (
+        variantsRef.current &&
+        !variantsRef.current.contains(event.target as Node)
+      ) {
+        setShowVariants(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showVariants]);
 
   const handleLearnMore = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -30,17 +46,17 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
   };
 
   return (
-    <div className="overflow-hidden rounded-3xl mb-6 relative group">
-      <div className="relative w-full h-full">
+    <div className="relative mb-6 overflow-hidden rounded-[1.75rem] shadow-[0_20px_45px_-25px_rgba(0,0,0,0.45)] group">
+      <div className="relative h-full w-full">
         <Image
           src={imagePath(slides[activeImageIndex])}
           alt={item.name}
           width={600}
           height={500}
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {slides.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/25 px-3 py-1 backdrop-blur-sm">
             {slides.map((_, dotIndex) => (
               <span
                 key={dotIndex}
@@ -52,33 +68,70 @@ const GalleryCard = ({ item }: { item: GalleryImagesType }) => {
           </div>
         )}
       </div>
-      <div className="w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end">
-        <p className="text-white lg:text-2xl text-xl">{item.name}</p>
-        <div className="flex items-center justify-between w-full relative">
-          <p className="text-white lg:text-2xl text-xl"></p>
-          <button
-            onClick={handleLearnMore}
-            className="text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm"
-          >
-            Pelajari Lebih Lanjut
-          </button>
 
-          {showVariants && (
-            <div className="absolute right-0 bottom-full mb-3 w-56 bg-white text-black rounded-lg shadow-lg p-3 z-50">
-              <p className="text-sm font-semibold mb-2">Varian</p>
-              {item.variants && item.variants.length > 0 ? (
-                <ul className="text-sm">
-                  {item.variants.map((v) => (
-                    <li key={v} className="py-1 border-b last:border-b-0">
-                      {v}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm text-neutral-500">Tidak ada varian.</p>
-              )}
+      <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/45 to-transparent px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+        <div className="space-y-4">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
+                Menu Signature
+              </p>
+              <p className="mt-1 text-lg font-semibold text-white sm:text-xl">
+                {item.name}
+              </p>
             </div>
-          )}
+
+            {item.variants && item.variants.length > 0 && (
+              <div className="relative" ref={variantsRef}>
+                <button
+                  onClick={handleLearnMore}
+                  className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-primary hover:bg-primary/20 hover:text-primary sm:px-4"
+                >
+                  <Icon
+                    icon={showVariants ? "material-symbols:close-rounded" : "mdi:format-list-bulleted-type"}
+                    width={18}
+                    height={18}
+                  />
+                  <span>{showVariants ? "Tutup" : "Lihat Varian"}</span>
+                </button>
+
+                <div
+                  className={`absolute bottom-full right-0 mb-3 w-64 rounded-2xl border border-neutral-200 bg-white/95 p-4 text-left shadow-2xl shadow-black/25 backdrop-blur-lg transition-all duration-300 ${
+                    showVariants
+                      ? "translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-2 opacity-0"
+                  }`}
+                >
+                  <div className="mb-3 flex items-center justify-between">
+                    <p className="text-sm font-semibold text-neutral-900">
+                      Varian tersedia
+                    </p>
+                    <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                      {item.variants.length}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {item.variants.map((variant) => (
+                      <span
+                        key={variant}
+                        className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-sm font-medium text-primary"
+                      >
+                        {variant}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* <div className="flex items-center justify-between text-sm text-white/80">
+            <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 backdrop-blur-sm">
+              Pilih sesuai selera
+            </span>
+            <span className="font-medium text-white/90">Tap untuk detail</span>
+          </div> */}
         </div>
       </div>
     </div>
